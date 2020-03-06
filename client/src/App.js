@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import Articles from './components/Articles';
 
 function App() {
+
+  const fetchData = () => {
+    const key = process.env.REACT_APP_API_KEY;
+    const BASE_API = 'https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=';
+    const url = `${BASE_API}${key}`;
+    console.log(url);
+    axios.get(url).then(res => console.log(res.data))
+    .catch(err => console.log(err));
+  }
+  //fetchData()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Articles />
     </div>
   );
 }
