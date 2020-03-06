@@ -22,7 +22,7 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFetching: false,
-                articles: [...state.articles, action.payload],
+                articles: action.payload,
                 error: ""
             };
         case FETCHING_ARTICLES_FAILURE:

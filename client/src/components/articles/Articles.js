@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { getArticles } from  './../store/actions';
+import { getArticles } from  '../../store/actions';
 
-const Articles = props => {
+const Articles = ({articles, isFetching, error, getArticles}) => {
     useEffect(() => {
-        props.getArticles();
+        getArticles();
     }, [])
     return(
         <Wrapper>
