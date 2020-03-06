@@ -7,7 +7,12 @@ import {
 const initialState = {
     articles: [],
     isFetching: false,
-    error: ""
+    error: "",
+    periods: [
+        {name: "1 day", value: 1},
+        {name: "7 days", value: 7},
+        {name: "30 days", value: 30}
+    ]
 }
 
 export const reducer = (state = initialState, action) => {

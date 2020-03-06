@@ -49,7 +49,7 @@ table {
 
 * {
   box-sizing: border-box;
-  color: #495057;
+  color: rgba($color: #000000, $alpha: 0.8);
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -65,4 +65,14 @@ input {
   border: none;
   background: none;
   outline: none;
+}
+
+.container {
+  padding: 0 2rem;
+  @media (min-width: 750px) {
+      padding: 0 3rem;
+  }
+  @media (min-width: 950px) {
+      padding: 0 8rem;
+  }
 }
