@@ -15,7 +15,23 @@ const Navbar = () => {
             </Container>
         </Nav>
     )
-}
+};
+
+const Nav = styled.nav`
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 900;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+    .tool-bar {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+`;
 
 const SearchInput = styled.div`
     position: relative;
@@ -39,19 +55,7 @@ const SearchInput = styled.div`
             color: #2196f3;
         }
     }
-`
-
-const Nav = styled.nav`
-    width: 100%;
-    height: 70px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.25);
-    .tool-bar {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-    }
-`
+`;
 
 const Logo = styled.a`
     font-family: 'DM Serif Display', serif;
@@ -65,6 +69,6 @@ const Logo = styled.a`
             display: block;
         }
     }
-`
+`;
 
 export default Navbar;

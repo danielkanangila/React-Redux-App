@@ -3,6 +3,7 @@ import Articles from './components/articles/Articles';
 import Navbar from './components/Navbar';
 import { Container } from './components/styled-components';
 import SubNav from './components/SubNav';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Container>
         <Articles />
       </Container>
+      <Footer />
     </div>
   );
 }
